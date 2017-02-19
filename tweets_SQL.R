@@ -1,6 +1,6 @@
 
 
-library(RODBC)
+library(RMySQL)
 
 
-data_odbc = odbcDriverConnect(connection="server=localhost; database=hello; uid=root; pwd=sql")
+mydb= dbConnect(MySQL(), user='root',password='sql', dbname='hello', host='localhost')
